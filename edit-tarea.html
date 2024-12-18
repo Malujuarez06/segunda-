@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Tarea</title>
+    <link rel="stylesheet" href="edit-tarea.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Editar Tarea</h1>
+    </header>
+
+    <div class="form-container">
+        <form id="edit-tarea-form">
+            <label for="tarea-title">Título</label>
+            <input type="text" id="tarea-title" name="title" required>
+
+            <label for="tarea-content">Contenido</label>
+            <textarea id="tarea-content" name="content" required></textarea>
+
+            <label for="tarea-image">Imagen</label>
+            <input type="file" id="tarea-image" name="image">
+
+            <button type="submit">Guardar Cambios</button>
+        </form>
+    </div>
+
+    <button onclick="logout()">Cerrar sesión</button>
+
+    <script src="edit-tarea.js"></script>
+</body>
+</html>

@@ -10,7 +10,6 @@ function renderTareas() {
         const tareaElement = document.createElement("div");
         tareaElement.classList.add("tarea");
 
-        // Mostrar la imagen, título y contenido de la tarea
         tareaElement.innerHTML = `
             <img src="${tarea.image}" class="tarea-image" alt="Tarea imagen">
             <h3>${tarea.title}</h3>
@@ -51,30 +50,23 @@ function generatePdf(index) {
     const usablePageWidth = pageWidth - 2 * margin;
     const usablePageHeight = pageHeight - 2 * margin;
 
-    doc.setDrawColor(0);
-    doc.setLineWidth(1);
-    doc.rect(margin, margin, usablePageWidth, usablePageHeight);
-
-    const titleX = pageWidth / 2;
-    const titleY = margin + 20;
     doc.setFontSize(16);
-    doc.text(tarea.title, titleX, titleY, { align: 'center' });
+    doc.text(tarea.title, pageWidth / 2, margin + 10, { align: 'center' });
 
     doc.setFontSize(12);
-    doc.text(tarea.content, margin + 10, titleY + 20);
+    doc.text(tarea.content, margin + 10, margin + 20);
 
     if (tarea.image) {
         const img = new Image();
         img.src = tarea.image;
-
         img.onload = function () {
-            const imgWidth = usablePageWidth / 2; // Reducir el ancho de la imagen
-            const imgHeight = (img.height / img.width) * imgWidth; // Mantener la relación de aspecto
-            doc.addImage(img, 'JPEG', margin + 10, titleY + 40, imgWidth, imgHeight);
-            doc.save($tarea.title.pdf); // Guardar el PDF con el nombre de la tarea
+            const imgWidth = usablePageWidth / 2;
+            const imgHeight = (img.height / img.width) * imgWidth;
+            doc.addImage(img, 'JPEG', margin + 10, margin + 30, imgWidth, imgHeight);
+            doc.save($tarea.title.pdf);
         };
     } else {
-        doc.save($tarea.title.pdf); // Si no tiene imagen, solo guarda el contenido de texto
+        doc.save($tarea.title.pdf);
     }
 }
 
