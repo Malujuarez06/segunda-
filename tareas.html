@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tareas</title>
     <link rel="stylesheet" href="tareas.css">
-    <!-- Incluye jsPDF -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 </head>
 <body>
     <header>
-        <h1>tareas</h1>
+        <h1>Tareas</h1>
         <button onclick="window.location.href='create-tareas.html'">Crear nueva tarea</button>
         <div class="search-container">
-            <input type="text" id="search" placeholder="Buscar tarea..." oninput="searchNotes()">
+            <input type="text" id="search" placeholder="Buscar tareas..." oninput="searchTareas()">
         </div>
+        <button onclick="logout()">Cerrar sesión</button>
     </header>
-    <div id="tareas"></div>
-    <button onclick="logout()">Cerrar Sesión</button>
+    <div id="tareas-container"></div>
+
     <script src="tareas.js"></script>
 </body>
 </html>

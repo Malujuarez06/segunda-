@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Tarea</title>
+    <link rel="stylesheet" href="create-tarea.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Crear Tarea</h1>
+        <button onclick="window.location.href='tareas.html'">Volver a Tareas</button>
+    </header>
+    <div class="form-container">
+        <form id="create-tarea-form">
+            <label for="tarea-title">Título</label>
+            <input type="text" id="tarea-title" required>
+
+            <label for="tarea-content">Contenido</label>
+            <textarea id="tarea-content" required></textarea>
+
+            <label for="tarea-image">Imagen</label>
+            <input type="file" id="tarea-image" accept="image/*">
+
+            <button type="submit">Guardar Tarea</button>
+        </form>
+    </div>
+    <script src="create-tarea.js"></script>
+</body>
+</html>

@@ -15,9 +15,11 @@ function renderTareas() {
             <img src="${tarea.image}" class="tarea-image" alt="Tarea imagen">
             <h3>${tarea.title}</h3>
             <p>${tarea.content}</p>
-            <button onclick="editTarea(${index})">Editar</button>
-            <button onclick="deleteTarea(${index})">Eliminar</button>
-            <button onclick="generatePdf(${index})">Generar PDF</button>
+            <div class="tarea-actions">
+                <button onclick="editTarea(${index})">Editar</button>
+                <button onclick="deleteTarea(${index})">Eliminar</button>
+                <button onclick="generatePdf(${index})">Generar PDF</button>
+            </div>
         `;
         tareasContainer.appendChild(tareaElement);
     });
@@ -26,9 +28,8 @@ function renderTareas() {
 // Función para editar una tarea
 function editTarea(index) {
     const tarea = tareas[index];
-    // Redirigir a la página de editar con los detalles de la tarea
     localStorage.setItem("tareaToEdit", JSON.stringify(tarea));
-    window.location.href = "edit-tarea.html"; // Redirige a la página de edición
+    window.location.href = "create-tarea.html"; // Redirige a la página de edición
 }
 
 // Función para eliminar una tarea
@@ -44,37 +45,33 @@ function generatePdf(index) {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
 
-    // Añadir un marco al PDF
     const margin = 10;
     const pageWidth = doc.internal.pageSize.getWidth();
     const pageHeight = doc.internal.pageSize.getHeight();
     const usablePageWidth = pageWidth - 2 * margin;
     const usablePageHeight = pageHeight - 2 * margin;
 
-    // Dibujar el marco
     doc.setDrawColor(0);
     doc.setLineWidth(1);
     doc.rect(margin, margin, usablePageWidth, usablePageHeight);
 
-    // Centrar el título
     const titleX = pageWidth / 2;
     const titleY = margin + 20;
     doc.setFontSize(16);
     doc.text(tarea.title, titleX, titleY, { align: 'center' });
 
-    // Añadir contenido
     doc.setFontSize(12);
     doc.text(tarea.content, margin + 10, titleY + 20);
 
-    // Añadir imagen
     if (tarea.image) {
         const img = new Image();
         img.src = tarea.image;
+
         img.onload = function () {
             const imgWidth = usablePageWidth / 2; // Reducir el ancho de la imagen
             const imgHeight = (img.height / img.width) * imgWidth; // Mantener la relación de aspecto
-            doc.addImage(img, 'JPEG', margin + 10, titleY + 40, imgWidth, imgHeight); // Ajusta el tamaño de la imagen
-            doc.save($tarea.title.pdf); // Guardar el PDF con el título de la tarea
+            doc.addImage(img, 'JPEG', margin + 10, titleY + 40, imgWidth, imgHeight);
+            doc.save($tarea.title.pdf); // Guardar el PDF con el nombre de la tarea
         };
     } else {
         doc.save($tarea.title.pdf); // Si no tiene imagen, solo guarda el contenido de texto
@@ -99,9 +96,11 @@ function renderFilteredTareas(filteredTareas) {
             <img src="${tarea.image}" class="tarea-image" alt="Tarea imagen">
             <h3>${tarea.title}</h3>
             <p>${tarea.content}</p>
-            <button onclick="editTarea(${index})">Editar</button>
-            <button onclick="deleteTarea(${index})">Eliminar</button>
-            <button onclick="generatePdf(${index})">Generar PDF</button>
+            <div class="tarea-actions">
+                <button onclick="editTarea(${index})">Editar</button>
+                <button onclick="deleteTarea(${index})">Eliminar</button>
+                <button onclick="generatePdf(${index})">Generar PDF</button>
+            </div>
         `;
         tareasContainer.appendChild(tareaElement);
     });
@@ -109,7 +108,7 @@ function renderFilteredTareas(filteredTareas) {
 
 // Cerrar sesión
 function logout() {
-    localStorage.removeItem('loggedIn'); // Eliminar la sesión almacenada
+    localStorage.removeItem('loggedIn');
     window.location.href = 'index.html'; // Redirigir al login
 }
 

@@ -1,109 +1,137 @@
-/* tareas.css */
-
+/* Establece el fondo de toda la página en un rosa fuerte */
 body {
     font-family: Arial, sans-serif;
+    background-color: #FF1493; /* Rosa fuerte */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
+    color: white; /* Texto blanco para mejor contraste */
 }
 
+/* Estilo para el encabezado */
 header {
-    background-color: #4CAF50;
+    background-color: #FF1493; /* Rosa fuerte */
     color: white;
-    padding: 1rem;
+    padding: 20px;
     text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2rem;
-}
-
-header button {
-    background-color: #ffffff;
-    color: #4CAF50;
-    border: none;
-    border-radius: 5px;
-    padding: 0.5rem 1rem;
-    margin-top: 0.5rem;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-header button:hover {
-    background-color: #3e8e41;
-    color: white;
-}
-
-.search-container {
-    margin-top: 1rem;
-}
-
-.search-container input {
-    padding: 0.5rem;
-    width: 80%;
-    max-width: 400px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-#tareas {
-    padding: 1rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-    margin: 0 auto;
-    max-width: 1200px;
-}
-
-.tarea {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-}
-
-.tarea h2 {
-    margin-top: 0;
-    font-size: 1.5rem;
-    color: #4CAF50;
-}
-
-.tarea p {
-    margin: 0.5rem 0;
-}
-
+/* Estilo para los botones */
 button {
-    background-color: #4CAF50;
+    background-color: #FF1493; /* Rosa fuerte */
     color: white;
+    padding: 10px 20px;
     border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+    margin: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 16px;
+    border-radius: 5px;
 }
 
 button:hover {
-    background-color: #3e8e41;
+    background-color: #F06FA0; /* Rosa un poco más claro al hacer hover */
 }
 
-button:disabled {
-    background-color: #ddd;
-    cursor: not-allowed;
+/* Estilo para el contenedor de búsqueda */
+.search-container {
+    margin-top: 20px;
 }
 
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #f4f4f9;
-    color: #333;
-    margin-top: 2rem;
+/* Estilo para el campo de búsqueda */
+input[type="text"] {
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para el contenedor de tareas */
+#tareas-container {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Estilo para cada tarea */
+.tarea {
+    background-color: white; /* Fondo blanco para las tareas */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para la imagen de la tarea */
+.tarea img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Estilo para el título de la tarea */
+.tarea h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #FF1493; /* Rosa fuerte */
+}
+
+/* Estilo para el contenido de la tarea */
+.tarea p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Estilo para los botones de acción de la tarea (editar, eliminar, PDF) */
+.tarea-actions {
+    margin-top: 10px;
+}
+
+.tarea-actions button {
+    background-color: #FF1493; /* Rosa fuerte */
+    margin: 5px;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.tarea-actions button:hover {
+    background-color: #F06FA0; /* Rosa un poco más claro al hacer hover */
+}
+
+/* Estilo para el formulario de creación de tarea */
+form {
+    background-color: #FF1493; /* Rosa fuerte */
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+/* Estilo para los campos del formulario */
+form label, form textarea, form input {
+    margin-bottom: 10px;
+    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+form input[type="file"] {
+    background-color: white;
+    color: black;
+}
+
+/* Estilo para los botones dentro del formulario */
+form button {
+    background-color: #FF1493; /* Rosa fuerte */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #F06FA0; /* Rosa un poco más claro al hacer hover */
 }
