@@ -1,0 +1,161 @@
+/* General Styles */
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #ffeef5;  /* Fondo rosa claro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+button {
+    background-color: #ff85b3;  /* Color rosa para botones */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #ff5f91;  /* Color rosa más oscuro al hacer hover */
+}
+
+/* Register and Login View */
+#contenedor {
+    background: #ffb6c1;  /* Fondo rosa para el contenedor */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+}
+
+#central {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#register, #login {
+    width: 100%;
+}
+
+.titulo {
+    font-size: 1.5em;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    width: 100%;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+input[type="email"], input[type="password"] {
+    background-color: #ffd6e7;  /* Fondo rosa claro para inputs */
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.pie-form {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.pie-form a {
+    color: #ff85b3;  /* Color rosa para enlaces */
+    text-decoration: none;
+}
+
+.pie-form a:hover {
+    text-decoration: underline;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #ffeef5;  /* Fondo rosa claro */
+    margin: 0;
+    padding: 20px;
+}
+
+#create-note-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h2 {
+    margin: 0;
+}
+
+header button {
+    background-color: #ff85b3;  /* Color rosa para botones */
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: #ff5f91;  /* Color rosa más oscuro al hacer hover */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"], textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="file"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    background-color: #ff15b3;  /* Color rosa para botones de submit */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff1f91;  /* Color rosa más oscuro al hacer hover */
+}

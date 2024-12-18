@@ -1,0 +1,109 @@
+/* tareas.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header button {
+    background-color: #ffffff;
+    color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+header button:hover {
+    background-color: #3e8e41;
+    color: white;
+}
+
+.search-container {
+    margin-top: 1rem;
+}
+
+.search-container input {
+    padding: 0.5rem;
+    width: 80%;
+    max-width: 400px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#tareas {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.tarea {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+.tarea h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #4CAF50;
+}
+
+.tarea p {
+    margin: 0.5rem 0;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3e8e41;
+}
+
+button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f4f4f9;
+    color: #333;
+    margin-top: 2rem;
+}

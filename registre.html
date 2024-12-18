@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Registro de Usuario</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Videojuegos & Desarrollo">
+    <meta name="description" content="Formulario de Registro de Usuario">
+    <meta name="keywords" content="Formulario, Registro, Usuario">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="contenedor">
+        <div id="central">
+            <div id="register">
+                <div class="titulo">Registrarse</div>
+                <form id="registerform">
+                    <input type="email" id="register-email" placeholder="Correo electrónico" required>
+                    <input type="password" id="register-password" placeholder="Contraseña" required>
+                    <button type="button" onclick="register()">Registrarse</button>
+                </form>
+                <div class="pie-form">
+                    <a href="index.html">¿Ya tienes cuenta? Inicia sesión</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
